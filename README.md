@@ -1,3 +1,7 @@
+
+# ML_Project
+Sentiment Analysis, Face Recognition and OCR project with Vue js. 
+
 **AI/ML Web Application**
 
 An AI/ML-based web application that integrates multiple machine learning functionalities including Face Recognition, Sentiment Analysis, and OCR for Indian Languages.
@@ -159,7 +163,7 @@ More NLP models for deeper sentiment analysis
 
 User authentication and project management
 
-Author
+**Author**
 
-Developed as part of an AI/ML project integrating machine learning models with a modern web interface.# ML_Project
-Sentiment Analysis, Face Recognition and OCR project with Vue js. 
+Developed as part of an AI/ML project integrating machine learning models with a modern web interface.
+
