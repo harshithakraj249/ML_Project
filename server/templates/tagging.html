@@ -1,0 +1,64 @@
+{% extends 'base_fd.html' %}
+
+{% block body %}
+<body>
+        <p></p><p></p><br/>
+        <br/>
+        <h3>These faces are identified in the uploaded video.<br/>Tag the faces you want to, so that we can detect the person in videos.</h3>
+        <div class="table-responsive">
+        {% if persons %}
+        <form action="{{ url_for('train') }}" method="post" role="form">
+        {% if persons|length > 5 %}
+        <table class="table table-hover">                
+                <tbody>
+                <tr>
+                <td><img height="80" width="100" src="{{ url_for('static', filename=persons[0]) }}"></td>
+                <td><input type="text" name="person0"/></td>
+                <td><input type="hidden" name="image0" value="{{ persons[0] }}" /></td>
+                </tr>
+                <tr>
+                <td><img height="80" width="100" src="{{ url_for('static', filename=persons[1]) }}"></td>
+                <td><input type="text" name="person1"/></td>
+                <td><input type="hidden" name="image1" value="{{ persons[1] }}" /></td>
+                </tr>
+                <tr>
+                <td><img height="80" width="100" src="{{ url_for('static', filename=persons[2]) }}"></td>
+                <td><input type="text" name="person2"/></td>
+                <td><input type="hidden" name="image2" value="{{ persons[2] }}" /></td>
+                </tr>
+                <tr>
+                <td><img height="80" width="100" src="{{ url_for('static', filename=persons[3]) }}"></td>
+                <td><input type="text" name="person3"/></td>
+                <td><input type="hidden" name="image3" value="{{ persons[3] }}" /></td>
+                </tr>
+                <tr>
+                <td><img height="80" width="100" src="{{ url_for('static', filename=persons[4]) }}"></td>
+                <td><input type="text" name="person4"/></td>
+                <td><input type="hidden" name="image4" value="{{ persons[4] }}" /></td>
+                </tr>
+                <tr>
+                <td><img height="80" width="100" src="{{ url_for('static', filename=persons[5]) }}"></td>
+                <td><input type="text" name="person5"/></td>
+                <td><input type="hidden" name="image5" value="{{ persons[5] }}" /></td>
+                </tr>
+                <tr>
+                <td><img height="80" width="100" src="{{ url_for('static', filename=persons[6]) }}"></td>
+                <td><input type="text" name="person6"/></td>
+                <td><input type="hidden" name="image6" value="{{ persons[6] }}" /></td>
+                </tr>
+                <tr>
+                <td><img height="80" width="100" src="{{ url_for('static', filename=persons[7]) }}"></td>
+                <td><input type="text" name="person7"/></td>
+                <td><input type="hidden" name="image7" value="{{ persons[7] }}" /></td>
+                </tr>
+                </tbody>
+        </table>
+        {% endif %}
+        <input type="submit" name="submit" value="Submit" />
+        <p></p>
+        </form>
+        {% endif %}
+
+</body>
+{% endblock %}
+

@@ -1,0 +1,31 @@
+{% extends "layout.html" %} {% block content %}
+
+<p class="text-left">OCR using Tesseract</p>
+<p>Upload an image of a document for OCR:
+    <div class="upload-form">
+        <form action="/upload_file" method="POST" enctype="multipart/form-data">
+        <label for="selectedlanguage"><h3 style="color: red">Choose Language</h3></label>
+        <select name="selectedlanguage" id="selectedlanguage">
+
+	        <option value="eng"><h4 style="color: blue">English </h4> </option>
+            <option value="kan"><h4 style="color: blue">Kannada </h4> </option>
+            <option value="hin"><h4 style="color: blue">Hindi </h4> </option>
+            <!--<option value="tel"><h4 style="color: blue">Telugu </h4> </option> -->
+
+        </select><br>
+        
+        <label for="pdf_img"><h3 style="color: red">Choose PDF or Image</h3></label>
+        <select name="pdf_img" id="pdf_img">
+        <option value="img_txt">Image</option>
+	    <option value="pdf_to_img">PDF </option>
+	     
+     </select><br><br>
+
+        </select>
+            <input type="file" name="files" />
+            <input type="submit" />
+        </form>
+    </div>
+
+
+    {% endblock %}

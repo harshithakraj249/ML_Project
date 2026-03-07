@@ -1,0 +1,32 @@
+{% extends 'base_fd.html' %}
+{% block body %}
+<body>
+	<br/><br/>
+	<h3>Face Detector</h3>
+	<p><font size="4">-- This is a POC application to detect the faces.</font></P>
+	<table style="border-collapse:separate;border-spacing:2em;">
+	<tbody>
+	{% if nofile %}
+	<tr><td>
+	<font color="red">You have not uploaded any image. Please upload a proper image</font>
+	</td></tr>
+	{% endif %}
+	<form action="{{ url_for('upload_img') }}" method="POST" enctype="multipart/form-data">
+	<tr>
+	<td><font size="3">Please upload an image <b>:</b></font></td>
+	<td><input type="file" name="image" /></td>
+	</tr>
+	<tr>
+	<td><input type="submit" name="submit" value="Upload" /></td>
+	</form>
+	<form action="{{ url_for('index') }}" method="GET">
+	<td><input type="submit" name="refresh" value="Refresh" /></td>
+	</form>
+	</tbody>
+	</table>
+	
+</body>
+{% endblock %}
+
+
+

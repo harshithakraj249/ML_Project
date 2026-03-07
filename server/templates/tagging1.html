@@ -1,0 +1,29 @@
+{% extends 'base_fd.html' %} {% block body %}
+
+<body>
+    <p></p>
+    <p></p><br/>
+    <br/>
+    <h3>These faces are identified in the uploaded video.<br/>Tag the faces you want to, so that we can detect the person in videos.</h3>
+    <div class="table-responsive">
+        {% if persons %}
+        <form action="{{ url_for('train') }}" method="post" role="form">
+            <table class="table table-hover">
+                <tbody>
+                    {% for i in range(total): %} {% set imageid = "image"+ i|string %} {% set textboxid = "person"+ i|string %}
+                    <tr>
+                        <td><img height="80" width="100" src="{{ url_for('static', filename=persons[i] )}}"></td>
+                        <td><input type="text" name="{{ textboxid }}" /></td>
+                        <td><input type="hidden" name="{{ imageid }}" value="{{ persons[i] }}" /></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <input type="hidden" name="total" value="{{ total }}" />
+            <input type="submit" name="submit" value="Submit" />
+            <p></p>
+        </form>
+        {% endif %}
+    </div>
+</body>
+{% endblock %}

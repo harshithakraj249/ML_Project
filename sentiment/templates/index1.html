@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sentiment Analysis</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel='stylesheet' type='text/css'>
+    <style type="text/css">
+        body {
+            background: #232526;
+            background: -webkit-linear-gradient(to right, #414345, #232526);
+            background: linear-gradient(to right, #414345, #232526);
+            font-family: Roboto;
+        }
+        
+        .main {
+            margin-top: 150px;
+        }
+        
+        .heading {
+            color: #EFEFEF;
+            font-size: 50px;
+        }
+        
+        td {
+            padding: 20px;
+        }
+        
+        .senti-label {
+            color: #fefefe;
+        }
+        
+        input[type=text] {
+            width: 35%;
+            height: 40px;
+            border-radius: 10px;
+            padding: 5px 15px 5px 15px;
+            border: 0px;
+        }
+        
+        input[type=submit] {
+            display: block;
+            font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+            font-weight: 600;
+            font-size: .75em;
+            letter-spacing: 1px;
+            height: 38px;
+            width: 120px;
+            line-height: 38px;
+            overflow: hidden;
+            background: #4dbecf;
+            border-radius: 3px;
+            box-shadow: 0 15px 30px rgba(black, .1);
+            border: 0;
+            cursor: pointer;
+            transition: all .3s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main" align="center">
+        <h1 class="heading">Sentiment Analysis</h1>
+        <form action="{{ url_for('predict')}}" method="post">
+            <input type="text" name="title" placeholder="Enter text to analyse" required="required" autocomplete="off" /><br><br>
+            <input type="submit" value="Analyse" id="sub">
+        </form>
+        <br>
+        <br>
+        <p>
+            {{ prediction_text }}
+            <p>
+    </div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+{% extends 'base_fd.html' %} {% block body %}
+
+<body>
+    <br/><br/>
+    <h3>Face Detection</h3>
+    <p>
+        <font size="4">-- This is a POC application to detect the faces in a Video stream.</font>
+    </P>
+    <table style="border-collapse:separate;border-spacing:2em;">
+        <tbody>
+            {% if nofile %}
+            <tr>
+                <td>
+                    <font color="red">You have not uploaded any video. Please upload a proper video</font>
+                </td>
+            </tr>
+            {% endif %}
+            <form action="{{ url_for('upload') }}" method="POST" onsubmit="return preloader()" enctype="multipart/form-data">
+                <tr>
+                    <td>
+                        <font size="3">Please upload an video<b>:</b></font>
+                    </td>
+                    <td><input type="file" name="files" /></td>
+                </tr>
+                <div id="spinner" style="display: none;    
+   width: 100%;
+   height: 100%;
+   background-color: rgba(138,125,125,0.7);
+   top: 0px;
+   left: 0px;
+   position: absolute;">
+                    <i class="fa-li fa fa-spinner fa-spin fa-5x" style="
+   margin-top: 20%;
+   margin-left: 50%;"></i></div>
+                <tr>
+                    <td>
+                        <div><input type="submit" name="submit" value="Upload" /></div>
+                    </td>
+                </tr>
+            </form>
+        </tbody>
+    </table>
+
+</body>
+{% endblock %} {% block js %} function preloader(){ document.getElementById("spinner").style.display = "block"; document.getElementById("nav").style.display = "none"; }//preloader {% endblock %}

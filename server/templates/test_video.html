@@ -1,0 +1,32 @@
+{% extends 'base_fd.html' %}
+
+{% block body %}
+<body>
+        <p></p><p></p><br/>
+        <br/>
+        <div class="table-responsive">
+        <table style="border-collapse:separate;border-spacing:2em;">
+        <tbody>
+        {% if nofile %}
+        <tr><td>
+        <font color="red">You have not uploaded any video. Please upload a proper video</font>
+        </td></tr>
+        {% endif %}
+        <form action="{{ url_for('test_face') }}" method="POST" enctype="multipart/form-data">
+        <tr>
+        <td><font size="3">Tagged photos are trained. Please upload video to test.<b>:</b></font></td>
+        <td><input type="file" name="video" /></td>
+        </tr>
+        <tr>
+        <td><input type="submit" name="submit" value="Upload" /></td>
+
+       </tr>
+        </form>
+        </tbody>
+        </table>
+        </div>
+
+
+</body>
+{% endblock %}
+
