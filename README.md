@@ -1,10 +1,10 @@
-AI/ML Web Application
+**AI/ML Web Application**
 
 An AI/ML-based web application that integrates multiple machine learning functionalities including Face Recognition, Sentiment Analysis, and OCR for Indian Languages.
 The application uses Vue.js for the frontend and Flask for the backend APIs.
 
 Features
-1. Face Recognition
+**1. Face Recognition**
 
 Detects and identifies faces from images or videos.
 
@@ -12,7 +12,7 @@ Automatically tags recognized faces.
 
 Useful for organizing and searching media files.
 
-2. Sentiment Analysis
+**2. Sentiment Analysis**
 
 Classifies the sentiment of a given sentence.
 
@@ -30,8 +30,7 @@ Anger
 
 Surprise
 
-3. OCR (Optical Character Recognition)
-
+**3. OCR (Optical Character Recognition)**
 Extracts text from images or PDF files.
 
 Supports Indian languages.
@@ -44,8 +43,8 @@ Accepts formats such as:
 
 .pdf
 
-Tech Stack
-Frontend
+**Tech Stack**
+**Frontend**
 
 Vue.js
 
@@ -55,7 +54,7 @@ CSS3
 
 JavaScript
 
-Backend
+**Backend**
 
 Flask (Python)
 
@@ -83,10 +82,10 @@ ml_project/
 │
 └── README.md
 Installation
-1. Clone the Repository
+**1. Clone the Repository**
 git clone https://github.com/your-username/ml_project.git
 cd ml_project
-2. Backend Setup (Flask)
+**2. Backend Setup (Flask)**
 
 Install required Python packages:
 
@@ -98,12 +97,12 @@ flask run
 
 or
 
-python app.py
+**python app.py**
 
 The Flask backend will start on:
 
 http://localhost:5000
-3. Frontend Setup (Vue.js)
+**3. Frontend Setup (Vue.js)**
 
 Navigate to the frontend folder:
 
