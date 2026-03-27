@@ -85,7 +85,9 @@ ml_project/
 │   └── package.json
 │
 └── README.md
+
 Installation
+
 **1. Clone the Repository**
 git clone https://github.com/your-username/ml_project.git
 cd ml_project
